@@ -1,3 +1,7 @@
+import sparkHotstar from "@/lib/img/sparkHotstar.png";
+import travelBharat from "@/lib/img/travelBharat.png";
+import faculty from "@/lib/img/faculty.png";
+
 export const PROFILE = {
   name: "Sunny Sharma",
   role: "Full Stack Developer (MERN) — Penetration Tester",
@@ -80,7 +84,7 @@ export const PROJECTS = [
     id: "sparkhotstar",
     title: "SparkHotstar",
     subtitle: "OTT Streaming Platform",
-    image:'src/lib/img/sparkHotstar.png',
+    image: sparkHotstar,
     tech: ["HTML5", "CSS3", "JavaScript"],
     bullets: [
       "SPA with routing",
@@ -100,7 +104,7 @@ export const PROJECTS = [
     id: "travel-bharat",
     title: "Travel Bharat",
     subtitle: "Tourism Discovery Platform",
-    image: "src/lib/img/travelBharat.png",
+    image: travelBharat,
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind"],
     bullets: ["Search & filters", "REST API", "JWT auth", "Admin dashboard"],
     description:
@@ -115,8 +119,7 @@ export const PROJECTS = [
     id: "client-portfolios",
     title: "Client Portfolio Projects",
     subtitle: "Professional & Academic Websites",
-    image:
-      "src/lib/img/faculty.png",
+    image: faculty,
     tech: ["HTML", "CSS", "JavaScript"],
     bullets: ["Clean UI", "Responsive", "Modern design", "Optimized"],
     description:
