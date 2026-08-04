@@ -184,7 +184,7 @@ export default function Services() {
             <h3 className="mt-2 font-display text-3xl md:text-4xl font-bold text-white tracking-tight">
               Download my resume.
             </h3>
-            <p className="mt-2 text-zinc-400 text-sm">PDF · updated April 2025 · CGPA 9.10/10 · 200+ TryHackMe rooms.</p>
+            <p className="mt-2 text-zinc-400 text-sm">PDF · updated June 2026 · CGPA 9.10/10 · 200+ TryHackMe rooms.</p>
           </div>
           <a
             href={PROFILE.resumeUrl}
