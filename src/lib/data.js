@@ -24,11 +24,28 @@ export const STATS = [
 export const SKILL_GROUPS = [
   {
     title: "Frontend",
-    items: ["React.js", "JavaScript", "TypeScript", "HTML5", "CSS3", "Tailwind CSS", "Vite", "Framer Motion", "Three.js"],
+    items: [
+      "React.js",
+      "JavaScript",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Tailwind CSS",
+      "Vite",
+      "Framer Motion",
+      "Three.js",
+    ],
   },
   {
     title: "Backend",
-    items: ["Node.js", "Express.js", "MongoDB", "SQL / NoSQL", "REST APIs", "JWT Auth"],
+    items: [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "SQL / NoSQL",
+      "REST APIs",
+      "JWT Auth",
+    ],
   },
   {
     title: "Python",
@@ -36,7 +53,17 @@ export const SKILL_GROUPS = [
   },
   {
     title: "Security",
-    items: ["Kali Linux", "Penetration Testing", "OWASP Top 10", "Burp Suite", "Metasploit", "Nmap", "Wireshark", "Gobuster", "Hydra"],
+    items: [
+      "Kali Linux",
+      "Penetration Testing",
+      "OWASP Top 10",
+      "Burp Suite",
+      "Metasploit",
+      "Nmap",
+      "Wireshark",
+      "Gobuster",
+      "Hydra",
+    ],
   },
   {
     title: "DevOps",
@@ -53,23 +80,27 @@ export const PROJECTS = [
     id: "sparkhotstar",
     title: "SparkHotstar",
     subtitle: "OTT Streaming Platform",
-    image:
-      "https://images.unsplash.com/photo-1614020661498-fef5b2293108?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1OTV8MHwxfHNlYXJjaHwxfHxzdHJlYW1pbmclMjBhcHAlMjBtb3ZpZSUyMGludGVyZmFjZSUyMGRhcmt8ZW58MHx8fHwxNzgxOTMzOTY0fDA&ixlib=rb-4.1.0&q=85",
+    image:'src/lib/img/sparkHotstar.png',
     tech: ["HTML5", "CSS3", "JavaScript"],
-    bullets: ["SPA with routing", "Dynamic UI animations", "Search & JWT auth", "Watchlist & history"],
+    bullets: [
+      "SPA with routing",
+      "Dynamic UI animations",
+      "Search & Filter",
+      "Watchlist & history",
+    ],
     description:
       "A Netflix / Hotstar-inspired streaming platform built from scratch with a custom SPA router in vanilla JS — no frameworks.",
     code: "https://github.com/sunny8240/SparkHotstar.git",
     demo: "https://sunny8240.github.io/SparkHotstar/",
     featured: true,
     year: "2025",
+    privateRepo: false,
   },
   {
     id: "travel-bharat",
     title: "Travel Bharat",
     subtitle: "Tourism Discovery Platform",
-    image:
-      "https://images.pexels.com/photos/5077049/pexels-photo-5077049.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
+    image: "src/lib/img/travelBharat.png",
     tech: ["React", "Node.js", "Express", "MongoDB", "Tailwind"],
     bullets: ["Search & filters", "REST API", "JWT auth", "Admin dashboard"],
     description:
@@ -78,13 +109,14 @@ export const PROJECTS = [
     demo: "https://travelbharat-web.vercel.app/",
     featured: true,
     year: "2026",
+    privateRepo: false,
   },
   {
     id: "client-portfolios",
     title: "Client Portfolio Projects",
     subtitle: "Professional & Academic Websites",
     image:
-      "https://images.unsplash.com/photo-1710438399422-2fca27686bcd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2MzR8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwZGFyayUyMGFic3RyYWN0JTIwdGV4dHVyZSUyMHByZW1pdW18ZW58MHx8fHwxNzgxOTMzOTY0fDA&ixlib=rb-4.1.0&q=85",
+      "src/lib/img/faculty.png",
     tech: ["HTML", "CSS", "JavaScript"],
     bullets: ["Clean UI", "Responsive", "Modern design", "Optimized"],
     description:
@@ -93,6 +125,7 @@ export const PROJECTS = [
     demo: "https://adityakatkar.vercel.app/",
     featured: false,
     year: "2025",
+    privateRepo: true,
   },
 ];
 
@@ -134,9 +167,18 @@ export const EXPERIENCE = [
 ];
 
 export const SERVICES_PREVIEW = [
-  { title: "Frontend Engineering", desc: "Modern, responsive UI with smooth animations and great UX." },
-  { title: "Full Stack Development", desc: "Secure backend systems, APIs & scalable architecture." },
-  { title: "Penetration Testing", desc: "Identify vulnerabilities & improve application security." },
+  {
+    title: "Frontend Engineering",
+    desc: "Modern, responsive UI with smooth animations and great UX.",
+  },
+  {
+    title: "Full Stack Development",
+    desc: "Secure backend systems, APIs & scalable architecture.",
+  },
+  {
+    title: "Penetration Testing",
+    desc: "Identify vulnerabilities & improve application security.",
+  },
 ];
 
 export const PRICING = [

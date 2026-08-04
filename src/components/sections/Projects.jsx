@@ -48,7 +48,8 @@ function ProjectCard({ p, index }) {
 
       <div className={`md:col-span-5 ${reversed ? "md:order-1" : ""}`}>
         <div className="label-mono">
-          Project {String(index + 1).padStart(2, "0")} / {String(PROJECTS.length).padStart(2, "0")}
+          Project {String(index + 1).padStart(2, "0")} /{" "}
+          {String(PROJECTS.length).padStart(2, "0")}
         </div>
         <h3 className="mt-3 font-display text-3xl md:text-5xl font-bold tracking-tight text-white">
           {p.title}
@@ -58,7 +59,10 @@ function ProjectCard({ p, index }) {
 
         <ul className="mt-5 space-y-1.5">
           {p.bullets.map((b) => (
-            <li key={b} className="flex items-start gap-2 text-sm text-zinc-300">
+            <li
+              key={b}
+              className="flex items-start gap-2 text-sm text-zinc-300"
+            >
               <span className="mt-2 w-1 h-1 rounded-full bg-[#FF5E00] flex-shrink-0" />
               {b}
             </li>
@@ -77,15 +81,26 @@ function ProjectCard({ p, index }) {
         </div>
 
         <div className="mt-7 grid grid-cols-1 gap-3 sm:flex sm:items-center">
-          <a
-            href={p.code}
-            target="_blank"
-            rel="noreferrer"
-            className="btn-pill btn-ghost justify-center sm:justify-start"
-            data-testid={`project-code-${p.id}`}
-          >
-            <GitHubIcon className="w-4 h-4" /> View Code
-          </a>
+          {p.privateRepo ? (
+            <button
+              disabled
+              className="btn-pill opacity-60 cursor-not-allowed border border-white/10 bg-zinc-800 text-zinc-400 justify-center sm:justify-start"
+            >
+              <GitHubIcon className="w-4 h-4 mr-2" />
+              Private Repository
+            </button>
+          ) : (
+            <a
+              href={p.code}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-pill btn-ghost justify-center sm:justify-start"
+              data-testid={`project-code-${p.id}`}
+            >
+              <GitHubIcon className="w-4 h-4 mr-2" />
+              View Code
+            </a>
+          )}
           <a
             href={p.demo}
             target="_blank"
@@ -139,9 +154,3 @@ export default function Projects() {
     </section>
   );
 }
-
-
-
-
-
-
