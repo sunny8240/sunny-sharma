@@ -5,13 +5,13 @@ export const PROFILE = {
   phone: "+91 87676 08240",
   location: "Lonavala, Pune, Maharashtra",
   intro:
-    "Building secure, modern web applications with React, JavaScript, Node.js & Python. B.Sc. Cybersecurity (CGPA: 9.03/10).",
+    "Building secure, modern web applications with React, JavaScript, Node.js & Python. B.Sc. Cybersecurity (CGPA: 9.10/10).",
   socials: {
     github: "https://github.com/sunny8240",
     tryhackme: "https://tryhackme.com/p/0xSunny",
     linkedin: "www.linkedin.com/in/sunny-sharma-4b75a6325",
   },
-  resumeUrl: "/resume/sunny-sharma-resume.pdf",
+  resumeUrl: "public/Sunny_Sharma_Resume.pdf",
 };
 
 export const STATS = [
