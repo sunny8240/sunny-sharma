@@ -8,8 +8,8 @@ export const PROFILE = {
     "Building secure, modern web applications with React, JavaScript, Node.js & Python. B.Sc. Cybersecurity (CGPA: 9.03/10).",
   socials: {
     github: "https://github.com/sunny8240",
-    tryhackme: "https://tryhackme.com/",
-    linkedin: "#",
+    tryhackme: "https://tryhackme.com/p/0xSunny",
+    linkedin: "www.linkedin.com/in/sunny-sharma-4b75a6325",
   },
   resumeUrl: "/resume/sunny-sharma-resume.pdf",
 };
@@ -17,8 +17,8 @@ export const PROFILE = {
 export const STATS = [
   { label: "Status", value: "Open to Work" },
   { label: "TryHackMe", value: "200+ Rooms" },
-  { label: "CGPA", value: "9.03 / 10" },
-  { label: "Projects", value: "6+ Shipped" },
+  { label: "CGPA", value: "9.10 / 10" },
+  { label: "Projects", value: "3+ Shipped" },
 ];
 
 export const SKILL_GROUPS = [
@@ -59,7 +59,7 @@ export const PROJECTS = [
     bullets: ["SPA with routing", "Dynamic UI animations", "Search & JWT auth", "Watchlist & history"],
     description:
       "A Netflix / Hotstar-inspired streaming platform built from scratch with a custom SPA router in vanilla JS — no frameworks.",
-    code: "https://github.com/sunny8240/SparkHotstar",
+    code: "https://github.com/sunny8240/SparkHotstar.git",
     demo: "https://sunny8240.github.io/SparkHotstar/",
     featured: true,
     year: "2025",
@@ -74,7 +74,7 @@ export const PROJECTS = [
     bullets: ["Search & filters", "REST API", "JWT auth", "Admin dashboard"],
     description:
       "End-to-end MERN tourism app for state-wise / city-wise destination discovery with role-based admin dashboard.",
-    code: "https://github.com/sunny8240/travel-bharat",
+    code: "https://github.com/sunny8240/travelbharat.git",
     demo: "https://travelbharat-web.vercel.app/",
     featured: true,
     year: "2026",
@@ -90,7 +90,7 @@ export const PROJECTS = [
     description:
       "Responsive portfolio and academic websites for professionals and university faculty — content-first, fast, accessible.",
     code: "#",
-    demo: "#",
+    demo: "https://adityakatkar.vercel.app/",
     featured: false,
     year: "2025",
   },
@@ -126,7 +126,7 @@ export const EXPERIENCE = [
     when: "2024 — Present",
     where: "Pune, India",
     points: [
-      "CGPA 9.03 / 10 — Semesters: 9.05, 9.10, 8.95.",
+      "CGPA 9.1 / 10 — Semesters: 9.05, 9.10, 8.67,9.55.",
       "Strong focus on secure development and applied cryptography.",
       "Combining academics with real-world client projects.",
     ],
