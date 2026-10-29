@@ -112,6 +112,19 @@ function ProjectCard({ p, index }) {
               Live Demo <ArrowUpRight className="w-4 h-4" />
             </a>
           )}
+          {p.appLinks?.map((appLink) => (
+            <a
+              key={appLink.label}
+              href={appLink.url}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-pill btn-ghost justify-center sm:justify-start"
+              data-testid={`project-app-${p.id}-${appLink.label.toLowerCase().replace(/\s+/g, "-")}`}
+            >
+              Get it on {appLink.label}
+              <ArrowUpRight className="w-4 h-4" />
+            </a>
+          ))}
         </div>
       </div>
     </motion.article>

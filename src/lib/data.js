@@ -136,12 +136,24 @@ export const PROJECTS = [
       "Customer, vehicle-owner and admin workflows",
       "Vehicle listings, availability, KYC and approvals",
       "Booking lifecycle, payments and live trip maps",
-      "React Native app integrated with REST APIs",
+      "React Native app for Android and iOS, integrated with REST APIs",
+      "Mobile onboarding, vehicle discovery, bookings and profile screens",
+      "KYC camera capture and document image uploads",
     ],
     description:
-      "A vehicle-rental marketplace spanning web, backend and mobile. Worked across customer and owner journeys, booking and payment flows, admin operations, and the Expo app.",
+      "A vehicle-rental marketplace spanning web, backend and mobile. Contributed to the React Native and Expo app for Android and iOS, building customer screens and integrating mobile workflows with backend APIs, alongside web and platform features.",
     code: "#",
     demo: "https://driveonyx.in",
+    appLinks: [
+      {
+        label: "Google Play",
+        url: "https://play.google.com/store/apps/details?id=com.driveonyx.app&pcampaignid=web_share",
+      },
+      {
+        label: "App Store",
+        url: "https://apps.apple.com/us/app/driveonyx-car-bike-rental/id6822633256",
+      },
+    ],
     featured: true,
     year: "2026",
     privateRepo: true,
@@ -209,8 +221,9 @@ export const EXPERIENCE = [
     when: "Sep 2026 — Present",
     where: "Pune, India",
     points: [
-      "Develop and maintain DriveOnyx features across the web platform, backend and Expo mobile app.",
-      "Integrate React and React Native clients with Node.js and Express REST APIs.",
+      "Develop and maintain DriveOnyx features across the web platform, backend and React Native (Expo) mobile app for Android and iOS.",
+      "Build mobile onboarding, vehicle browse, search, filters, vehicle details, booking and profile screens.",
+      "Integrate mobile and web clients with Node.js and Express REST APIs; implement KYC camera capture and document image uploads.",
       "Debug customer, vehicle-owner and admin workflows; collaborate using Git and GitHub.",
     ],
   },
