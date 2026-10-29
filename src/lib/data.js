@@ -10,7 +10,7 @@ export const PROFILE = {
   phone: "+91 87676 08240",
   location: "Pune, Maharashtra, India",
   intro:
-    "MERN and React Native Developer Intern building web and mobile features for DriveOnyx. B.Sc. Cyber Security student with hands-on VAPT practice and a 9.10/10 CGPA.",
+    "MERN and React Native Developer Intern building web and mobile features for DriveOnyx. B.Sc. Cyber Security student with foundational penetration-testing knowledge and a 9.10/10 CGPA.",
   socials: {
     github: "https://github.com/sunny8240",
     tryhackme: "https://tryhackme.com/p/0xSunny",
@@ -96,18 +96,29 @@ export const SKILL_GROUPS = [
       "Kubernetes Basics",
       "CI/CD Concepts",
       "Linux",
+      "DigitalOcean"
     ],
   },
   {
-    title: "Cybersecurity & VAPT",
+    title: "Cybersecurity",
     items: [
-      "Vulnerability Assessment & Penetration Testing",
-      "Web Application Security Testing",
-      "OWASP Top 10",
-      "Secure Coding",
+      "Cybersecurity Fundamentals",
+      "Basic Penetration-Testing Knowledge",
+      "OWASP Top 10 Fundamentals",
+      "Secure-Coding Fundamentals",
       "Burp Suite",
       "Nmap",
       "Wireshark",
+    ],
+  },
+  {
+    title: "System Design",
+    items: [
+      "System Design Fundamentals",
+      "High-Level Design (HLD)",
+      "Low-Level Design (LLD)",
+      "Application Architecture Basics",
+      "API Design",
     ],
   },
   {
@@ -274,82 +285,9 @@ export const SERVICES_PREVIEW = [
     desc: "Cross-platform mobile experiences built with React Native and Expo.",
   },
   {
-    title: "Cybersecurity & VAPT",
-    desc: "Hands-on security labs, OWASP concepts and vulnerability assessment fundamentals.",
+    title: "Cybersecurity Fundamentals",
+    desc: "Cybersecurity fundamentals, OWASP concepts and basic penetration-testing knowledge.",
   },
-];
-
-export const PRICING = [
-  {
-    tier: "Basic",
-    price: "₹2,999",
-    delivery: "5 – 7 Days",
-    blurb: "Perfect for small businesses and personal projects",
-    features: [
-      "Up to 5 responsive pages",
-      "Modern UI with Tailwind CSS",
-      "Mobile-first design",
-      "Contact form integration",
-      "Basic SEO optimization",
-      "Fast loading performance",
-      "Cross-browser compatibility",
-      "1 month free support",
-      "Source code delivery",
-    ],
-  },
-  {
-    tier: "Medium",
-    price: "₹5,999",
-    delivery: "7 – 14 Days",
-    blurb: "Ideal for growing businesses with dynamic needs",
-    highlighted: true,
-    features: [
-      "Everything in Basic",
-      "Up to 10 responsive pages",
-      "Custom React.js components",
-      "Advanced animations (Framer Motion)",
-      "Blog / CMS integration",
-      "MongoDB database integration",
-      "REST API development",
-      "User authentication system",
-      "Admin dashboard",
-      "Advanced SEO & performance",
-      "3 months free support",
-      "Deployment assistance",
-    ],
-  },
-  {
-    tier: "Premium",
-    price: "₹8,999+",
-    delivery: "2 – 4 Weeks",
-    blurb: "Enterprise-grade full-stack solutions",
-    features: [
-      "Everything in Medium",
-      "Unlimited pages & features",
-      "Full-stack MERN development",
-      "Custom backend architecture",
-      "Advanced user roles & permissions",
-      "Payment gateway integration",
-      "3D web experiences (Three.js)",
-      "Real-time features (WebSockets)",
-      "Advanced security implementation",
-      "API security & OWASP protection",
-      "Cloud deployment (AWS / Vercel)",
-      "CI/CD pipeline setup",
-      "6 months priority support",
-    ],
-  },
-];
-
-export const ADDONS = [
-  { name: "3D Web Experiences", price: "₹2,000" },
-  { name: "Advanced Animations", price: "₹1,200" },
-  { name: "Payment Gateway Setup", price: "₹1,500" },
-  { name: "Custom Admin Dashboard", price: "₹1,000" },
-  { name: "API Development", price: "₹1,500" },
-  { name: "Security Audit", price: "₹800" },
-  { name: "PWA Conversion", price: "₹900" },
-  { name: "Additional Month Support", price: "₹500" },
 ];
 
 export const NAV_LINKS = [

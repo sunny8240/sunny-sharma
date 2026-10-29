@@ -1,19 +1,118 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
   <meta charset="UTF-8" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="color-scheme" content="dark" />
+  <style>
+    html,
+    body,
+    #root {
+      min-height: 100%;
+      margin: 0;
+      background: #050505;
+      color: #fff;
+    }
+
+    html {
+      color-scheme: dark;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    #app-loader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: grid;
+      place-content: center;
+      gap: 0.75rem;
+      background: #050505;
+      color: #fff;
+      text-align: center;
+    }
+
+    #app-loader strong {
+      display: inline-flex;
+      justify-content: center;
+      font-size: 1.75rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      perspective: 500px;
+    }
+
+    #app-loader strong span {
+      display: inline-block;
+      color: #fff;
+      font: inherit;
+      letter-spacing: inherit;
+      animation: app-loader-letter 0.45s both;
+      animation-delay: calc(var(--letter-index) * 25ms);
+    }
+
+    #app-loader strong span:nth-child(n + 7) {
+      color: #ff5e00;
+    }
+
+    #app-loader span {
+      color: #a1a1aa;
+      font-family: monospace;
+      font-size: 0.75rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    #app-loader i {
+      width: 2rem;
+      height: 2px;
+      margin: 0.25rem auto 0;
+      background: #ff5e00;
+      animation: app-loader-pulse 0.9s ease-in-out infinite alternate;
+    }
+
+    @keyframes app-loader-pulse {
+      from {
+        opacity: 0.35;
+        transform: scaleX(0.45);
+      }
+
+      to {
+        opacity: 1;
+        transform: scaleX(1);
+      }
+    }
+
+    @keyframes app-loader-letter {
+      from {
+        opacity: 0;
+        transform: translateY(0.65em) rotateX(-45deg);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0) rotateX(0);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #app-loader i,
+      #app-loader strong span {
+        animation: none;
+      }
+    }
+  </style>
 
   <title>Sunny Sharma | MERN, React Native &amp; Cybersecurity Developer</title>
 
   <meta name="description"
-    content="Sunny Sharma is a MERN and React Native Developer Intern in Pune, India, and a B.Sc. Cyber Security student with hands-on VAPT practice. Explore web, mobile and security projects." />
+    content="Sunny Sharma is a MERN and React Native Developer Intern in Pune, India, and a B.Sc. Cyber Security student with foundational penetration-testing knowledge. Explore web, mobile and system-design projects." />
 
   <meta name="keywords"
-    content="Sunny Sharma, Sunny Sharma developer, MERN developer Pune, React Native developer India, cybersecurity student, VAPT, web application security, penetration testing, React, TypeScript, Node.js, Express, MongoDB, Expo" />
+    content="Sunny Sharma, Sunny Sharma developer, MERN developer Pune, React Native developer India, cybersecurity student, basic penetration-testing knowledge, system design HLD LLD, React, TypeScript, Node.js, Express, MongoDB, Expo" />
 
   <meta name="author" content="Sunny Sharma" />
   <meta name="robots" content="index, follow" />
@@ -29,7 +128,7 @@
   <meta property="og:locale" content="en_IN" />
   <meta property="og:title" content="Sunny Sharma | MERN, React Native & Cybersecurity Developer" />
   <meta property="og:description"
-    content="MERN and React Native development, cybersecurity studies and hands-on VAPT practice. Explore Sunny Sharma's experience and projects." />
+    content="MERN and React Native development, cybersecurity studies, foundational penetration-testing knowledge, and system design basics." />
   <meta property="og:url" content="https://sunnysharma.dev/" />
   <meta property="og:image" content="https://sunnysharma.dev/driveonyx-portfolio.png" />
   <meta property="og:image:alt" content="DriveOnyx vehicle rental marketplace website designed for exploring and booking cars and bikes." />
@@ -39,7 +138,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Sunny Sharma | MERN, React Native & Cybersecurity Developer" />
   <meta name="twitter:description"
-    content="MERN and React Native development, cybersecurity studies and hands-on VAPT practice." />
+    content="MERN and React Native development, cybersecurity studies, foundational penetration-testing knowledge, and system design basics." />
   <meta name="twitter:image" content="https://sunnysharma.dev/driveonyx-portfolio.png" />
 
   <meta name="theme-color" content="#050505" />
@@ -53,7 +152,7 @@
       "url": "https://sunnysharma.dev/",
       "image": "https://sunnysharma.dev/driveonyx-portfolio.png",
       "jobTitle": "MERN and React Native Developer Intern",
-      "description": "MERN and React Native Developer Intern and B.Sc. Computer Science (Cyber Security) student with hands-on vulnerability assessment and penetration testing practice.",
+      "description": "MERN and React Native Developer Intern and B.Sc. Computer Science (Cyber Security) student with foundational cybersecurity and basic penetration-testing knowledge.",
       "email": "mailto:sunnytarunsharma67@gmail.com",
       "telephone": "+91 87676 08240",
       "address": {
@@ -78,7 +177,10 @@
         "Express.js",
         "MongoDB",
         "Cybersecurity",
-        "Vulnerability assessment and penetration testing",
+        "Basic penetration-testing knowledge",
+        "System design fundamentals",
+        "High-level design (HLD)",
+        "Low-level design (LLD)",
         "Web application security",
         "OWASP Top 10"
       ],
@@ -92,6 +194,24 @@
 </head>
 
 <body>
+  <div id="app-loader" role="status" aria-label="Loading Sunny Sharma's portfolio">
+    <strong aria-hidden="true">
+      <span style="--letter-index: 0">S</span>
+      <span style="--letter-index: 1">u</span>
+      <span style="--letter-index: 2">n</span>
+      <span style="--letter-index: 3">n</span>
+      <span style="--letter-index: 4">y</span>
+      <span style="--letter-index: 5">&nbsp;</span>
+      <span style="--letter-index: 6">S</span>
+      <span style="--letter-index: 7">h</span>
+      <span style="--letter-index: 8">a</span>
+      <span style="--letter-index: 9">r</span>
+      <span style="--letter-index: 10">m</span>
+      <span style="--letter-index: 11">a</span>
+    </strong>
+    <span>Loading portfolio</span>
+    <i aria-hidden="true"></i>
+  </div>
   <div id="root">
     <header>
       <a href="#main-content">Sunny Sharma</a>
@@ -110,8 +230,8 @@
         <p>
           MERN and React Native Developer Intern at Darshan Productions,
           building web and mobile features for DriveOnyx. B.Sc. Computer
-          Science (Cyber Security) student with hands-on vulnerability
-          assessment and penetration testing (VAPT) practice.
+          Science (Cyber Security) student with foundational cybersecurity
+          knowledge and a basic understanding of penetration testing.
         </p>
         <p>
           <a href="mailto:sunnytarunsharma67@gmail.com">Contact Sunny</a>
@@ -124,9 +244,10 @@
         <p>
           Sunny builds full-stack web applications and cross-platform mobile
           experiences using React, TypeScript, Node.js, Express, MongoDB,
-          React Native and Expo. His cybersecurity studies and hands-on VAPT
-          labs inform his interest in secure coding, OWASP concepts and web
-          application security testing.
+          React Native and Expo. His cybersecurity studies include
+          foundational security concepts and a basic understanding of
+          penetration testing. He is also learning system design, from
+          high-level design (HLD) to low-level design (LLD).
         </p>
       </section>
       <section id="projects" aria-labelledby="projects-title">
@@ -181,8 +302,8 @@
         <p>
           React, TypeScript, JavaScript, Node.js, Express, REST APIs, MongoDB,
           Mongoose, React Native, Expo, AWS fundamentals, Docker, OWASP Top 10,
-          vulnerability assessment, penetration testing, Burp Suite, Nmap and
-          Wireshark.
+          cybersecurity fundamentals, basic penetration testing, system
+          design, HLD, LLD, Burp Suite, Nmap and Wireshark.
         </p>
       </section>
       <section id="contact" aria-labelledby="contact-title">

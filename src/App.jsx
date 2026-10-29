@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Portfolio from "@/pages/Portfolio";
@@ -6,8 +6,19 @@ import SmoothScroll from "@/components/SmoothScroll";
 import { Toaster } from "sonner";
 
 function App() {
-  useEffect(() => {
-    document.documentElement.classList.add("dark");
+  useLayoutEffect(() => {
+    const loader = document.getElementById("app-loader");
+    if (!loader) return undefined;
+
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const timeout = window.setTimeout(
+      () => loader.remove(),
+      prefersReducedMotion ? 0 : 750,
+    );
+
+    return () => window.clearTimeout(timeout);
   }, []);
 
   return (

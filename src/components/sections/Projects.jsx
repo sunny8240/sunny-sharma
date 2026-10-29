@@ -21,10 +21,10 @@ function ProjectCard({ p, index }) {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
       data-testid={`project-card-${p.id}`}
-      className="group relative grid md:grid-cols-12 gap-6 md:gap-12 items-center"
+      className="group relative grid grid-cols-1 items-center gap-6 md:grid-cols-12 md:gap-12"
     >
       <div
-        className={`md:col-span-7 ${reversed ? "md:order-2" : ""} relative overflow-hidden rounded-2xl md:rounded-3xl border border-white/[0.07] bg-[#0a0a0a]`}
+        className={`relative min-w-0 overflow-hidden rounded-2xl border border-white/[0.07] bg-[#0a0a0a] md:col-span-7 md:rounded-3xl ${reversed ? "md:order-2" : ""}`}
       >
         <motion.div style={{ y }} className="relative">
           <img
@@ -46,7 +46,7 @@ function ProjectCard({ p, index }) {
         </div>
       </div>
 
-      <div className={`md:col-span-5 ${reversed ? "md:order-1" : ""}`}>
+      <div className={`min-w-0 md:col-span-5 ${reversed ? "md:order-1" : ""}`}>
         <div className="label-mono">
           Project {String(index + 1).padStart(2, "0")} /{" "}
           {String(PROJECTS.length).padStart(2, "0")}
@@ -80,7 +80,7 @@ function ProjectCard({ p, index }) {
           ))}
         </div>
 
-        <div className="mt-7 grid grid-cols-1 gap-3 sm:flex sm:items-center">
+        <div className="mt-7 grid grid-cols-1 gap-3 sm:flex sm:flex-wrap sm:items-center">
           {p.privateRepo ? (
             <button
               disabled

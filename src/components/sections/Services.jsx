@@ -1,203 +1,173 @@
-﻿import { motion } from "framer-motion";
-import { Check, ArrowUpRight, Download } from "lucide-react";
-import { PRICING, ADDONS, SERVICES_PREVIEW, PROFILE } from "@/lib/data";
+import { motion } from "framer-motion";
+import {
+  ArrowDownRight,
+  ArrowUpRight,
+  Code2,
+  Download,
+  Layers3,
+  Smartphone,
+  Sparkles,
+} from "lucide-react";
+import { PROFILE, SERVICES_PREVIEW } from "@/lib/data";
+
+const serviceIcons = [Code2, Layers3, Smartphone, Sparkles];
 
 export default function Services() {
   return (
     <section
       id="services"
       data-testid="services-section"
-      className="relative py-20 md:py-44 px-4 md:px-10"
+      className="relative overflow-hidden py-20 md:py-36 px-4 md:px-10"
     >
-      <div className="max-w-7xl mx-auto">
-        {/* Marquee */}
-        <div className="overflow-hidden mb-12 md:mb-20 border-y border-white/[0.07] py-4 md:py-6">
-          <div className="marquee-track flex whitespace-nowrap gap-8 md:gap-12">
-            {Array(2)
-              .fill(0)
-              .map((_, k) => (
-                <div key={k} className="flex items-center gap-8 md:gap-12">
-                  {[
-                    "Open to Roles",
-                    "Freelance",
-                    "Internships",
-                    "Full-time",
-                    "React Native",
-                    "Frontend",
-                    "Full-Stack MERN",
-                  ].map((w) => (
-                    <span
-                      key={w + k}
-                      className="font-display text-3xl md:text-6xl font-black tracking-tight text-white/90 flex items-center gap-8 md:gap-12"
-                    >
-                      {w}
-                      <span className="w-3 h-3 rounded-full bg-[#FF5E00]" />
-                    </span>
-                  ))}
-                </div>
-              ))}
-          </div>
-        </div>
+      <div className="pointer-events-none absolute -right-36 top-36 h-80 w-80 rounded-full bg-[#FF5E00]/10 blur-[110px]" />
 
-        <div className="flex items-center gap-3 mb-8 md:mb-12">
-          <span className="w-8 h-px bg-[#FF5E00]" />
-          <span className="label-mono">05 · Services & Hire Me</span>
-        </div>
-
-        <div className="grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-12 items-end mb-10 md:mb-16">
-          <motion.h2
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9 }}
-            className="lg:col-span-7 font-display text-3xl md:text-6xl lg:text-7xl font-bold tracking-tighter text-white leading-[1.02]"
-          >
-            Available for work. Let's build something.
-          </motion.h2>
-          <div className="lg:col-span-5 text-zinc-400">
-            <p className="text-lg">
-              Focused on full-stack web and React Native development, with
-              experience contributing to a production vehicle-rental platform.
-            </p>
-            <p className="mt-3 text-sm font-mono text-zinc-500">
-              React · TypeScript · Node.js · Expo
-            </p>
-          </div>
-        </div>
-
-        {/* Service tiles */}
-        <div className="grid md:grid-cols-3 gap-4 mb-14 md:mb-24">
-          {SERVICES_PREVIEW.map((s, i) => (
-            <motion.div
-              key={s.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.7, delay: i * 0.08 }}
-              className="rounded-2xl p-5 sm:p-7 bg-[#0a0a0a] border border-white/[0.07] hover:border-[#FF5E00]/40 transition-colors"
-              data-testid={`service-tile-${s.title.toLowerCase().replace(/\s+/g, "-")}`}
-            >
-              <div className="label-mono">0{i + 1}</div>
-              <h3 className="mt-3 font-display text-2xl font-bold text-white">{s.title}</h3>
-              <p className="mt-3 text-zinc-400 text-sm leading-relaxed">{s.desc}</p>
-              <a
-                href="#contact"
-                className="mt-6 inline-flex items-center gap-1.5 text-sm text-[#FF5E00] hover:text-white transition-colors"
-              >
-                Contact <ArrowUpRight className="w-4 h-4" />
-              </a>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Pricing */}
-        <div className="mb-8 md:mb-12">
-          <div className="flex items-end justify-between flex-wrap gap-6 mb-10">
-            <div>
-              <div className="label-mono mb-3">Pricing · Web Development</div>
-              <h3 className="font-display text-3xl md:text-5xl font-bold text-white tracking-tighter">
-                Pick a package.
-              </h3>
-            </div>
-            <div className="text-sm text-zinc-500 font-mono max-w-sm">
-              Note: Delivery time may vary based on project complexity. WhatsApp &
-              email communication. No delays.
-            </div>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-4">
-            {PRICING.map((p, i) => (
-              <motion.div
-                key={p.tier}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.8, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                data-testid={`pricing-card-${p.tier.toLowerCase()}`}
-                className={`relative rounded-2xl md:rounded-3xl p-6 sm:p-8 flex flex-col ${
-                  p.highlighted
-                    ? "bg-gradient-to-b from-[#FF5E00]/15 to-[#0a0a0a] border border-[#FF5E00]/40"
-                    : "bg-[#0a0a0a] border border-white/[0.07]"
-                }`}
-              >
-                {p.highlighted && (
-                  <span className="absolute -top-3 left-8 px-3 py-1 rounded-full bg-[#FF5E00] text-black text-[11px] font-mono uppercase tracking-wider">
-                    Most Popular
+      <div className="relative mx-auto max-w-7xl">
+        <div className="mb-12 overflow-hidden border-y border-white/[0.07] py-4 md:mb-20 md:py-6">
+          <div className="marquee-track flex w-max whitespace-nowrap gap-6 md:gap-10">
+            {[0, 1].map((copy) => (
+              <div key={copy} className="flex items-center gap-6 md:gap-10">
+                {[
+                  "Websites",
+                  "Mobile Apps",
+                  "MERN",
+                  "React Native",
+                  "Built around your idea",
+                ].map((item) => (
+                  <span
+                    key={`${copy}-${item}`}
+                    className="flex items-center gap-6 font-display text-2xl font-bold tracking-tight text-white/90 sm:text-4xl md:gap-10 md:text-6xl"
+                  >
+                    {item}
+                    <span className="h-2 w-2 shrink-0 rounded-full bg-[#FF5E00] md:h-3 md:w-3" />
                   </span>
-                )}
-                <div className="label-mono">{p.tier} · {p.delivery}</div>
-                <div className="mt-3 font-display text-4xl sm:text-5xl font-black text-white tracking-tighter">
-                  {p.price}
-                </div>
-                <div className="mt-2 text-sm text-zinc-400">{p.blurb}</div>
-
-                <ul className="mt-7 space-y-2.5 flex-1">
-                  {p.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2 text-sm text-zinc-300">
-                      <Check className="w-4 h-4 text-[#FF5E00] mt-0.5 flex-shrink-0" />
-                      {f}
-                    </li>
-                  ))}
-                </ul>
-
-                <a
-                  href="#contact"
-                  data-testid={`pricing-cta-${p.tier.toLowerCase()}`}
-                  className={`mt-7 btn-pill ${
-                    p.highlighted ? "btn-primary" : "btn-ghost"
-                  } justify-center`}
-                >
-                  Get Started <ArrowUpRight className="w-4 h-4" />
-                </a>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-
-        {/* Addons */}
-        <div className="mt-10 md:mt-16 rounded-2xl md:rounded-3xl border border-white/[0.07] bg-[#0a0a0a] p-5 sm:p-8">
-          <div className="flex items-end justify-between flex-wrap gap-4 mb-8">
-            <div>
-              <div className="label-mono">Additional Services</div>
-              <h3 className="mt-2 font-display text-3xl font-bold text-white tracking-tight">
-                À la carte.
-              </h3>
-            </div>
-            <a href="#contact" className="text-sm text-[#FF5E00] hover:text-white inline-flex items-center gap-1.5">
-              Contact directly <ArrowUpRight className="w-4 h-4" />
-            </a>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
-            {ADDONS.map((a) => (
-              <div key={a.name} className="flex items-center justify-between rounded-xl border border-white/[0.06] bg-black/30 px-4 py-3">
-                <span className="text-sm text-zinc-200">{a.name}</span>
-                <span className="font-mono text-sm text-[#FF5E00]">{a.price}</span>
+                ))}
               </div>
             ))}
           </div>
         </div>
 
-        {/* Resume CTA */}
-        <div className="mt-10 md:mt-16 rounded-2xl md:rounded-3xl border border-white/[0.07] bg-[#0a0a0a] p-5 sm:p-8 md:p-12 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-          <div>
-            <div className="label-mono">Need a deeper look?</div>
-            <h3 className="mt-2 font-display text-3xl md:text-4xl font-bold text-white tracking-tight">
-              Download my resume.
-            </h3>
-            <p className="mt-2 text-zinc-400 text-sm">PDF · updated June 2026 · CGPA 9.10/10 · 200+ TryHackMe rooms.</p>
-          </div>
-          <a
-            href={PROFILE.resumeUrl}
-            download
-            data-testid="services-resume-download"
-            className="btn-pill btn-primary justify-center sm:justify-start"
-          >
-            <Download className="w-4 h-4" /> Download Resume
-          </a>
+        <div className="mb-8 flex items-center gap-3 md:mb-12">
+          <span className="h-px w-8 bg-[#FF5E00]" />
+          <span className="label-mono">05 · What I can build with you</span>
         </div>
+
+        <div className="mb-10 grid gap-6 md:mb-14 md:grid-cols-12 md:items-end md:gap-10">
+          <motion.h2
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="font-display text-4xl font-bold leading-[1.03] tracking-tighter text-white sm:text-5xl md:col-span-7 md:text-6xl lg:text-7xl"
+          >
+            Got an idea?
+            <br />
+            <span className="text-[#FF5E00]">Let’s make it real.</span>
+          </motion.h2>
+          <div className="text-zinc-400 md:col-span-5">
+            <p className="text-base leading-relaxed sm:text-lg">
+              Need a website, a mobile app, or both? Tell me what you have in
+              mind. We can shape the right solution together — no preset
+              packages, just a conversation about your project.
+            </p>
+            <p className="mt-3 font-mono text-xs text-zinc-500 sm:text-sm">
+              Web · iOS · Android · Full-stack
+            </p>
+          </div>
+        </div>
+
+        <div className="grid gap-3 sm:grid-cols-2 sm:gap-4 xl:grid-cols-4">
+          {SERVICES_PREVIEW.map((service, index) => {
+            const Icon = serviceIcons[index];
+
+            return (
+              <motion.article
+                key={service.title}
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{
+                  duration: 0.65,
+                  delay: index * 0.08,
+                  ease: [0.22, 1, 0.36, 1],
+                }}
+                whileHover={{ y: -6 }}
+                data-testid={`service-tile-${service.title.toLowerCase().replace(/\s+/g, "-")}`}
+                className="group relative min-w-0 overflow-hidden rounded-2xl border border-white/[0.08] bg-[#0a0a0a] p-5 transition-colors duration-300 hover:border-[#FF5E00]/40 sm:p-6"
+              >
+                <motion.div
+                  aria-hidden="true"
+                  className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-[#FF5E00]/10 blur-3xl"
+                  animate={{ scale: [0.9, 1.15, 0.9], opacity: [0.35, 0.7, 0.35] }}
+                  transition={{
+                    duration: 5 + index,
+                    repeat: Infinity,
+                    ease: "easeInOut",
+                  }}
+                />
+                <div className="relative">
+                  <div className="flex items-center justify-between gap-3">
+                    <span className="label-mono">
+                      {String(index + 1).padStart(2, "0")}
+                    </span>
+                    <Icon className="h-5 w-5 text-[#FF5E00]" aria-hidden="true" />
+                  </div>
+                  <h3 className="mt-7 font-display text-xl font-bold text-white sm:text-2xl">
+                    {service.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-zinc-400">
+                    {service.desc}
+                  </p>
+                  <a
+                    href="#contact"
+                    className="mt-6 inline-flex min-h-11 items-center gap-2 text-sm font-semibold text-[#FF5E00] transition-colors hover:text-white"
+                  >
+                    Let’s talk
+                    <ArrowDownRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:translate-y-1" />
+                  </a>
+                </div>
+              </motion.article>
+            );
+          })}
+        </div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="mt-6 grid gap-5 rounded-2xl border border-[#FF5E00]/25 bg-gradient-to-br from-[#FF5E00]/10 via-[#0a0a0a] to-[#0a0a0a] p-5 sm:p-7 md:mt-8 md:flex md:items-center md:justify-between md:gap-8 md:p-10"
+        >
+          <div className="min-w-0">
+            <span className="label-mono">Have a project in mind?</span>
+            <h3 className="mt-2 font-display text-2xl font-bold leading-tight tracking-tight text-white sm:text-3xl md:text-4xl">
+              Tell me what you need.
+            </h3>
+            <p className="mt-2 max-w-2xl text-sm leading-relaxed text-zinc-400 sm:text-base">
+              Share your idea, goals, and timeline. I’ll get back to you and we
+              can figure out the next step together.
+            </p>
+          </div>
+          <div className="grid shrink-0 gap-3 sm:flex sm:flex-wrap">
+            <a
+              href="#contact"
+              className="btn-pill btn-primary justify-center"
+              data-testid="services-project-contact"
+            >
+              I need a website or app
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+            <a
+              href={PROFILE.resumeUrl}
+              download
+              data-testid="services-resume-download"
+              className="btn-pill btn-ghost justify-center"
+            >
+              <Download className="h-4 w-4" />
+              Resume
+            </a>
+          </div>
+        </motion.div>
       </div>
     </section>
   );
 }
-
-

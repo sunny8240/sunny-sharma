@@ -72,12 +72,12 @@ export default function Hero() {
         </h1>
 
         {/* Role + intro */}
-        <div className="mt-10 grid md:grid-cols-12 gap-6 md:gap-10">
+        <div className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-12 md:gap-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 1.05, ease }}
-            className="md:col-span-7"
+            className="min-w-0 md:col-span-7"
           >
             <div className="label-mono mb-3">Currently</div>
             <p className="font-display text-xl md:text-2xl text-white/90 max-w-xl leading-snug">
@@ -149,7 +149,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 1.2, ease }}
-            className="md:col-span-5 md:col-start-8"
+            className="min-w-0 md:col-span-5 md:col-start-8"
           >
             <div className="grid grid-cols-2 gap-2 sm:gap-3 mt-6 md:mt-12">
               {STATS.map((s, i) => (
@@ -189,7 +189,6 @@ export default function Hero() {
     </section>
   );
 }
-
 
 
 

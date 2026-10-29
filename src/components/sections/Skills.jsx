@@ -18,8 +18,8 @@ export default function Skills() {
           <span className="label-mono">04 · Technical Skills</span>
         </div>
 
-        <div className="grid lg:grid-cols-12 gap-8 md:gap-12">
-          <div className="lg:col-span-6">
+        <div className="grid grid-cols-1 gap-8 md:gap-12 lg:grid-cols-12">
+          <div className="min-w-0 lg:col-span-6">
             <motion.h2
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -30,35 +30,55 @@ export default function Skills() {
               The stack behind the work.
             </motion.h2>
             <p className="mt-6 text-zinc-400 text-base md:text-lg max-w-md">
-              Tap a category to inspect the toolkit. Modern frontends, secure
-              APIs, Linux & offensive security tooling — all in one engineer.
+              Tap a category to explore my development toolkit, cybersecurity
+              fundamentals, and introductory system-design knowledge.
             </p>
 
-            <div className="mt-8 md:mt-10 flex gap-2 overflow-x-auto pb-2 sm:flex-wrap sm:overflow-visible sm:pb-0">
+            <div
+              role="group"
+              aria-label="Technical skill categories"
+              className="mt-8 flex gap-2 overflow-x-auto overscroll-x-contain pb-3 sm:mt-10 sm:flex-wrap sm:overflow-visible sm:pb-0"
+            >
               {SKILL_GROUPS.map((g) => (
-                <button
+                <motion.button
                   key={g.title}
+                  type="button"
+                  id={`skill-tab-${g.title.toLowerCase().replace(/\s+/g, "-")}`}
+                  aria-pressed={active === g.title}
+                  aria-controls="skill-display"
                   data-testid={`skill-tab-${g.title.toLowerCase()}`}
                   onClick={() => setActive(g.title)}
-                  className={`shrink-0 px-4 py-2 rounded-full font-mono text-xs uppercase tracking-wider transition-all duration-300 ${
+                  whileTap={{ scale: 0.94 }}
+                  transition={{ type: "spring", stiffness: 500, damping: 28 }}
+                  className={`relative isolate min-h-11 shrink-0 overflow-hidden rounded-full border px-4 py-2 font-mono text-xs uppercase tracking-wider transition-colors duration-300 ${
                     active === g.title
-                      ? "bg-[#FF5E00] text-black border border-[#FF5E00]"
-                      : "bg-white/[0.03] text-zinc-300 border border-white/10 hover:border-white/30"
+                      ? "border-[#FF5E00] text-black"
+                      : "border-white/10 bg-white/[0.03] text-zinc-300 hover:border-white/30"
                   }`}
                 >
+                  {active === g.title && (
+                    <motion.span
+                      layoutId="active-skill-tab"
+                      className="absolute inset-0 -z-10 rounded-full bg-[#FF5E00]"
+                      transition={{ type: "spring", stiffness: 420, damping: 34 }}
+                    />
+                  )}
                   {g.title}
-                </button>
+                </motion.button>
               ))}
             </div>
           </div>
 
-          <div className="lg:col-span-6">
+          <div className="min-w-0 lg:col-span-6">
             <motion.div
               key={active}
               initial={{ opacity: 0, y: 14 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
               data-testid="skill-display"
+              id="skill-display"
+              role="region"
+              aria-labelledby={`skill-tab-${current.title.toLowerCase().replace(/\s+/g, "-")}`}
               className="rounded-2xl md:rounded-3xl border border-white/[0.07] bg-[#0a0a0a] p-5 sm:p-8 md:p-10"
             >
               <div className="flex items-center justify-between">
@@ -94,6 +114,3 @@ export default function Skills() {
     </section>
   );
 }
-
-
-

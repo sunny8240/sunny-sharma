@@ -44,7 +44,7 @@ export default function Header() {
               </span>
             </a>
 
-            <nav className="hidden md:flex items-center gap-1">
+            <nav className="hidden lg:flex items-center gap-1">
               {NAV_LINKS.map((l) => (
                 <a
                   key={l.href}
@@ -61,7 +61,7 @@ export default function Header() {
               <a
                 href="#contact"
                 data-testid="header-hire-me"
-                className="hidden sm:inline-flex items-center gap-1.5 btn-pill btn-primary text-sm py-2 px-4"
+                className="hidden md:inline-flex items-center gap-1.5 btn-pill btn-primary text-sm py-2 px-4"
               >
                 Hire Me
                 <ArrowUpRight className="w-3.5 h-3.5" />
@@ -69,7 +69,7 @@ export default function Header() {
               <button
                 data-testid="mobile-menu-toggle"
                 onClick={() => setOpen((v) => !v)}
-                className="md:hidden p-2 rounded-full border border-white/10 hover:bg-white/5"
+                className="lg:hidden p-2 rounded-full border border-white/10 hover:bg-white/5"
               >
                 {open ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
               </button>
@@ -85,7 +85,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.35 }}
-            className="fixed inset-x-3 sm:inset-x-4 top-20 z-40 md:hidden glass rounded-2xl p-4"
+            className="fixed inset-x-3 sm:inset-x-4 top-20 z-40 lg:hidden glass rounded-2xl p-4"
             data-testid="mobile-menu"
           >
             <div className="flex flex-col">
@@ -106,4 +106,3 @@ export default function Header() {
     </>
   );
 }
-

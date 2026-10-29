@@ -29,9 +29,9 @@ export default function About() {
           <span className="label-mono">01 · About</span>
         </motion.div>
 
-        <div className="grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-20">
+        <div className="grid grid-cols-1 gap-8 md:gap-12 lg:grid-cols-12 lg:gap-20">
           {/* Sticky left */}
-          <div className="lg:col-span-5 lg:sticky lg:top-32 self-start">
+          <div className="min-w-0 lg:col-span-5 lg:sticky lg:top-32 self-start">
             <motion.h2
               initial="hidden"
               whileInView="show"
@@ -54,17 +54,17 @@ export default function About() {
               className="mt-8 text-zinc-400 text-base md:text-lg leading-relaxed max-w-md"
             >
               I’m a B.Sc. Computer Science (Cyber Security) student and MERN
-              & React Native Developer Intern at Darshan Productions. Alongside
-              building web and mobile features, I practise vulnerability
-              assessment and penetration testing (VAPT) through hands-on labs,
-              with a focus on web security and OWASP concepts. Security
-              fundamentals inform how I approach authentication, validation
-              and access control.
+              & React Native Developer Intern at Darshan Productions. I build
+              web and mobile features and have foundational cybersecurity and
+              basic penetration-testing knowledge. I’m also learning system
+              design from high-level design (HLD) through low-level design
+              (LLD). Secure-coding fundamentals inform how I approach
+              authentication, validation and access control.
             </motion.p>
           </div>
 
           {/* Right grid */}
-          <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="min-w-0 lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
             {SKILL_GROUPS.map((g, i) => (
               <motion.div
                 key={g.title}

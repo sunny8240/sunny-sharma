@@ -76,8 +76,8 @@ export default function Contact() {
           Let's work <span className="italic font-medium text-[#FF5E00]">together.</span>
         </motion.h2>
 
-        <div className="mt-10 md:mt-16 grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-20">
-          <div className="lg:col-span-5">
+        <div className="mt-10 md:mt-16 grid grid-cols-1 gap-8 md:gap-12 lg:grid-cols-12 lg:gap-20">
+          <div className="min-w-0 lg:col-span-5">
             <p className="text-zinc-400 text-base md:text-lg leading-relaxed">
               I’m a MERN and React Native Developer Intern studying Computer
               Science (Cyber Security). Reach out about junior full-stack or
@@ -122,7 +122,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="lg:col-span-7">
+          <div className="min-w-0 lg:col-span-7">
             <AnimatePresence mode="wait">
               {status === "success" ? (
                 <motion.div
@@ -256,4 +256,3 @@ export default function Contact() {
     </section>
   );
 }
-
