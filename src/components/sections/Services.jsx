@@ -22,7 +22,7 @@ export default function Services() {
                     "Freelance",
                     "Internships",
                     "Full-time",
-                    "Pen-Testing",
+                    "React Native",
                     "Frontend",
                     "Full-Stack MERN",
                   ].map((w) => (
@@ -56,11 +56,11 @@ export default function Services() {
           </motion.h2>
           <div className="lg:col-span-5 text-zinc-400">
             <p className="text-lg">
-              Currently open for freelance work, internships and entry-level
-              developer roles. Focused on secure and scalable solutions.
+              Focused on full-stack web and React Native development, with
+              experience contributing to a production vehicle-rental platform.
             </p>
             <p className="mt-3 text-sm font-mono text-zinc-500">
-              Response time · within 24h
+              React · TypeScript · Node.js · Expo
             </p>
           </div>
         </div>
@@ -199,6 +199,5 @@ export default function Services() {
     </section>
   );
 }
-
 
 

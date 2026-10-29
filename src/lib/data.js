@@ -1,28 +1,29 @@
 import sparkHotstar from "@/lib/img/sparkHotstar.png";
 import travelBharat from "@/lib/img/travelBharat.png";
 import faculty from "@/lib/img/faculty.png";
+import driveOnyx from "@/lib/img/driveOnyx-screenshot.png";
 
 export const PROFILE = {
   name: "Sunny Sharma",
-  role: "Full Stack Developer (MERN) — Penetration Tester",
+  role: "MERN & React Native Developer Intern",
   email: "sunnytarunsharma67@gmail.com",
   phone: "+91 87676 08240",
-  location: "Lonavala, Pune, Maharashtra",
+  location: "Pune, Maharashtra, India",
   intro:
-    "Building secure, modern web applications with React, JavaScript, Node.js & Python. B.Sc. Cybersecurity (CGPA: 9.10/10).",
+    "MERN and React Native Developer Intern building web and mobile features for DriveOnyx. B.Sc. Cyber Security student with hands-on VAPT practice and a 9.10/10 CGPA.",
   socials: {
     github: "https://github.com/sunny8240",
     tryhackme: "https://tryhackme.com/p/0xSunny",
-    linkedin: "www.linkedin.com/in/sunny-sharma-4b75a6325",
+    linkedin: "https://www.linkedin.com/in/sunny-sharma-4b75a6325",
   },
-  resumeUrl: "public/Sunny_Sharma_Resume.pdf",
+  resumeUrl: "/Sunny_Sharma_Resume.pdf",
 };
 
 export const STATS = [
-  { label: "Status", value: "Open to Work" },
-  { label: "TryHackMe", value: "200+ Rooms" },
+  { label: "Current Role", value: "Developer Intern" },
+  { label: "TryHackMe", value: "200+ Labs" },
   { label: "CGPA", value: "9.10 / 10" },
-  { label: "Projects", value: "3+ Shipped" },
+  { label: "Product Work", value: "Web + Mobile" },
 ];
 
 export const SKILL_GROUPS = [
@@ -30,14 +31,14 @@ export const SKILL_GROUPS = [
     title: "Frontend",
     items: [
       "React.js",
-      "JavaScript",
       "TypeScript",
+      "JavaScript (ES6+)",
       "HTML5",
       "CSS3",
       "Tailwind CSS",
       "Vite",
-      "Framer Motion",
-      "Three.js",
+      "React Router",
+      "Responsive Design",
     ],
   },
   {
@@ -45,41 +46,106 @@ export const SKILL_GROUPS = [
     items: [
       "Node.js",
       "Express.js",
-      "MongoDB",
-      "SQL / NoSQL",
       "REST APIs",
-      "JWT Auth",
+      "JWT Authentication",
+      "Role-Based Access Control",
+      "bcrypt",
+      "Zod",
+      "Multer",
+      "Helmet",
+      "Razorpay Integration",
     ],
   },
   {
-    title: "Python",
-    items: ["Python Programming", "Django (Basic)", "Flask (Basic)"],
+    title: "Database",
+    items: [
+      "MongoDB",
+      "Mongoose",
+      "SQL",
+      "Database Design",
+      "Validation",
+      "Indexing",
+      "Pagination",
+    ],
   },
   {
-    title: "Security",
+    title: "Mobile",
     items: [
-      "Kali Linux",
-      "Penetration Testing",
+      "React Native",
+      "Expo",
+      "Android & iOS Apps",
+      "Camera & Image Upload",
+      "API Integration",
+    ],
+  },
+  {
+    title: "State & Data",
+    items: [
+      "Context API",
+      "Zustand",
+      "Redux Toolkit",
+      "TanStack Query",
+      "Axios",
+    ],
+  },
+  {
+    title: "Cloud & DevOps",
+    items: [
+      "AWS (EC2, S3, IAM)",
+      "Docker",
+      "Kubernetes Basics",
+      "CI/CD Concepts",
+      "Linux",
+    ],
+  },
+  {
+    title: "Cybersecurity & VAPT",
+    items: [
+      "Vulnerability Assessment & Penetration Testing",
+      "Web Application Security Testing",
       "OWASP Top 10",
+      "Secure Coding",
       "Burp Suite",
-      "Metasploit",
       "Nmap",
       "Wireshark",
-      "Gobuster",
-      "Hydra",
     ],
   },
   {
-    title: "DevOps",
-    items: ["Docker", "Kubernetes", "Linux"],
-  },
-  {
-    title: "Tools",
-    items: ["Git", "GitHub", "Postman", "Bash / Shell Scripting"],
+    title: "Languages & Tools",
+    items: ["JavaScript", "TypeScript", "Python", "C", "SQL", "Git", "GitHub", "Postman"],
   },
 ];
 
 export const PROJECTS = [
+  {
+    id: "driveonyx",
+    title: "DriveOnyx",
+    subtitle: "Full-Stack Vehicle Rental · Web & Mobile",
+    image: driveOnyx,
+    tech: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "React Native",
+      "Expo",
+      "Razorpay",
+    ],
+    bullets: [
+      "Customer, vehicle-owner and admin workflows",
+      "Vehicle listings, availability, KYC and approvals",
+      "Booking lifecycle, payments and live trip maps",
+      "React Native app integrated with REST APIs",
+    ],
+    description:
+      "A vehicle-rental marketplace spanning web, backend and mobile. Worked across customer and owner journeys, booking and payment flows, admin operations, and the Expo app.",
+    code: "#",
+    demo: "https://driveonyx.in",
+    featured: true,
+    year: "2026",
+    privateRepo: true,
+  },
   {
     id: "sparkhotstar",
     title: "SparkHotstar",
@@ -96,7 +162,7 @@ export const PROJECTS = [
       "A Netflix / Hotstar-inspired streaming platform built from scratch with a custom SPA router in vanilla JS — no frameworks.",
     code: "https://github.com/sunny8240/SparkHotstar.git",
     demo: "https://sunny8240.github.io/SparkHotstar/",
-    featured: true,
+    featured: false,
     year: "2025",
     privateRepo: false,
   },
@@ -116,71 +182,87 @@ export const PROJECTS = [
     privateRepo: false,
   },
   {
-    id: "client-portfolios",
-    title: "Client Portfolio Projects",
-    subtitle: "Professional & Academic Websites",
+    id: "adkinest",
+    title: "Adkinest & Faculty Websites",
+    subtitle: "Agency & Academic Web Experiences",
     image: faculty,
-    tech: ["HTML", "CSS", "JavaScript"],
-    bullets: ["Clean UI", "Responsive", "Modern design", "Optimized"],
+    tech: ["React", "Tailwind CSS", "HTML", "CSS", "JavaScript"],
+    bullets: [
+      "Responsive digital-agency website",
+      "Reusable service and portfolio sections",
+      "Professional and academic web pages",
+    ],
     description:
-      "Responsive portfolio and academic websites for professionals and university faculty — content-first, fast, accessible.",
+      "A collection of responsive agency and academic websites, including Adkinest, built around clear content, reusable UI and mobile-friendly layouts.",
     code: "#",
-    demo: "https://adityakatkar.vercel.app/",
+    demo: null,
     featured: false,
-    year: "2025",
+    year: "2026",
     privateRepo: true,
   },
 ];
 
 export const EXPERIENCE = [
   {
-    title: "Full Stack Developer · Project-Based",
+    title: "MERN & React Native Developer Intern",
+    org: "Darshan Productions",
+    when: "Sep 2026 — Present",
+    where: "Pune, India",
+    points: [
+      "Develop and maintain DriveOnyx features across the web platform, backend and Expo mobile app.",
+      "Integrate React and React Native clients with Node.js and Express REST APIs.",
+      "Debug customer, vehicle-owner and admin workflows; collaborate using Git and GitHub.",
+    ],
+  },
+  {
+    title: "Full Stack Web Development Intern",
+    org: "Unified Mentor Pvt. Ltd.",
+    when: "Jan 2026 — Apr 2026",
+    where: "India",
+    points: [
+      "Completed a three-month internship covering frontend, backend and API-driven workflows.",
+      "Applied full-stack development practices through project work, code review and debugging.",
+    ],
+  },
+  {
+    title: "Self-Directed Software Development",
     org: "Independent Projects",
-    when: "2024 — Present",
-    where: "Lonavala, Pune",
+    when: "Oct 2025 — Present",
+    where: "Pune, India",
     points: [
-      "Shipped 6+ production-ready web apps including OTT and tourism platforms.",
-      "Built frontends in React + Tailwind and backends in Node, Express & MongoDB.",
-      "Designed animation-rich, responsive UIs with Framer Motion.",
-      "Implemented auth, REST APIs and dynamic content pipelines.",
+      "Build full-stack applications using React, TypeScript, Node.js, Express and MongoDB.",
+      "Implement authentication, role-based access, search, bookings, reviews and image uploads.",
+      "Apply secure-coding principles and explore Docker and foundational AWS deployment.",
     ],
   },
   {
-    title: "TryHackMe · Practical Training",
-    org: "Cybersecurity Labs",
-    when: "Ongoing",
-    where: "Online",
-    points: [
-      "Completed 200+ rooms across Web, PenTest, SOC and DFIR tracks.",
-      "Hands-on OWASP Top 10 exploitation and remediation.",
-      "Daily use of Nmap, Burp Suite, Metasploit, Wireshark.",
-    ],
-  },
-  {
-    title: "B.Sc. Cybersecurity",
+    title: "B.Sc. Computer Science (Cyber Security)",
     org: "Pimpri Chinchwad University",
     when: "2024 — Present",
     where: "Pune, India",
     points: [
-      "CGPA 9.1 / 10 — Semesters: 9.05, 9.10, 8.67,9.55.",
-      "Strong focus on secure development and applied cryptography.",
-      "Combining academics with real-world client projects.",
+      "CGPA: 9.10 / 10.",
+      "Combining computer science foundations with cybersecurity studies and applied development.",
     ],
   },
 ];
 
 export const SERVICES_PREVIEW = [
   {
-    title: "Frontend Engineering",
-    desc: "Modern, responsive UI with smooth animations and great UX.",
+    title: "Web Development",
+    desc: "Responsive React interfaces connected to reliable REST APIs.",
   },
   {
-    title: "Full Stack Development",
-    desc: "Secure backend systems, APIs & scalable architecture.",
+    title: "Full-Stack MERN",
+    desc: "Database-driven features, authentication and role-based workflows.",
   },
   {
-    title: "Penetration Testing",
-    desc: "Identify vulnerabilities & improve application security.",
+    title: "React Native",
+    desc: "Cross-platform mobile experiences built with React Native and Expo.",
+  },
+  {
+    title: "Cybersecurity & VAPT",
+    desc: "Hands-on security labs, OWASP concepts and vulnerability assessment fundamentals.",
   },
 ];
 

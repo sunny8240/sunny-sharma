@@ -41,9 +41,9 @@ export default function About() {
             >
               Crafted with{" "}
               <span className="italic font-medium text-[#FF5E00]">
-                obsession
+                care
               </span>{" "}
-              for speed, security & detail.
+              for useful, reliable products.
             </motion.h2>
             <motion.p
               initial="hidden"
@@ -53,10 +53,13 @@ export default function About() {
               variants={fadeUp}
               className="mt-8 text-zinc-400 text-base md:text-lg leading-relaxed max-w-md"
             >
-              Full Stack Developer (MERN) with hands-on cybersecurity. I build
-              modern, animation-rich web applications, secure REST APIs and
-              interactive 3D experiences — fluent across Linux, pen-testing and
-              the entire JavaScript stack.
+              I’m a B.Sc. Computer Science (Cyber Security) student and MERN
+              & React Native Developer Intern at Darshan Productions. Alongside
+              building web and mobile features, I practise vulnerability
+              assessment and penetration testing (VAPT) through hands-on labs,
+              with a focus on web security and OWASP concepts. Security
+              fundamentals inform how I approach authentication, validation
+              and access control.
             </motion.p>
           </div>
 
@@ -98,5 +101,3 @@ export default function About() {
     </section>
   );
 }
-
-

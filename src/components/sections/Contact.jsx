@@ -79,10 +79,9 @@ export default function Contact() {
         <div className="mt-10 md:mt-16 grid lg:grid-cols-12 gap-8 md:gap-12 lg:gap-20">
           <div className="lg:col-span-5">
             <p className="text-zinc-400 text-base md:text-lg leading-relaxed">
-              I'm actively looking for opportunities where I can contribute my
-              skills in full-stack development and cybersecurity. Whether it's
-              a full-time role, internship, or freelance project — I'd love to
-              hear from you.
+              I’m a MERN and React Native Developer Intern studying Computer
+              Science (Cyber Security). Reach out about junior full-stack or
+              mobile development opportunities and project collaborations.
             </p>
 
             <div className="mt-10 space-y-5">
@@ -115,7 +114,7 @@ export default function Contact() {
                       {PROFILE.location}
                     </div>
                     <div className="mt-0.5 text-xs font-mono text-zinc-500">
-                      Open to Remote · Available immediately
+                      MERN · React Native · Pune, India
                     </div>
                   </div>
                 </div>
@@ -257,5 +256,4 @@ export default function Contact() {
     </section>
   );
 }
-
 

@@ -101,15 +101,17 @@ function ProjectCard({ p, index }) {
               View Code
             </a>
           )}
-          <a
-            href={p.demo}
-            target="_blank"
-            rel="noreferrer"
-            className="btn-pill btn-primary justify-center sm:justify-start"
-            data-testid={`project-demo-${p.id}`}
-          >
-            Live Demo <ArrowUpRight className="w-4 h-4" />
-          </a>
+          {p.demo && (
+            <a
+              href={p.demo}
+              target="_blank"
+              rel="noreferrer"
+              className="btn-pill btn-primary justify-center sm:justify-start"
+              data-testid={`project-demo-${p.id}`}
+            >
+              Live Demo <ArrowUpRight className="w-4 h-4" />
+            </a>
+          )}
         </div>
       </div>
     </motion.article>

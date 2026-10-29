@@ -1,5 +1,11 @@
 ﻿import { motion } from "framer-motion";
-import { ArrowDown, Download, ArrowUpRight, Mail, MapPin } from "lucide-react";
+import {
+  ArrowDown,
+  Download,
+  ArrowUpRight,
+  Mail,
+  MapPin,
+} from "lucide-react";
 import MagneticButton from "@/components/MagneticButton";
 import { PROFILE, STATS } from "@/lib/data";
 import { lazy, Suspense } from "react";
@@ -75,9 +81,7 @@ export default function Hero() {
           >
             <div className="label-mono mb-3">Currently</div>
             <p className="font-display text-xl md:text-2xl text-white/90 max-w-xl leading-snug">
-              Full Stack Developer{" "}
-              <span className="text-[#FF5E00]">(MERN)</span> · Penetration
-              Tester.
+              {PROFILE.role}
             </p>
             <p className="mt-5 text-zinc-400 max-w-lg text-base md:text-lg leading-relaxed">
               {PROFILE.intro}
@@ -126,6 +130,17 @@ export default function Hero() {
                 <MapPin className="w-3.5 h-3.5" />
                 {PROFILE.location}
               </span>
+              <a
+                href={PROFILE.socials.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-1.5 text-zinc-400 transition-colors hover:text-white"
+                aria-label="View Sunny Sharma's LinkedIn profile"
+              >
+                <span className="font-sans text-sm font-bold leading-none">in</span>
+                LinkedIn
+                <ArrowUpRight className="w-3 h-3" />
+              </a>
             </div>
           </motion.div>
 
@@ -174,10 +189,6 @@ export default function Hero() {
     </section>
   );
 }
-
-
-
-
 
 
 

@@ -1,4 +1,4 @@
-﻿import { Mail, ArrowUpRight } from "lucide-react";
+import { Mail, ArrowUpRight } from "lucide-react";
 import GitHubIcon from "@/components/GitHubIcon";
 import { PROFILE } from "@/lib/data";
 
@@ -42,13 +42,26 @@ export default function Footer() {
               </span>
               <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-white transition-colors" />
             </a>
+            <a
+              href={PROFILE.socials.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              className="group flex items-center justify-between rounded-full border border-white/10 bg-white/[0.02] px-4 sm:px-5 py-3 hover:border-[#FF5E00]/40 transition-colors"
+              data-testid="footer-linkedin-link"
+            >
+              <span className="inline-flex min-w-0 items-center gap-2 text-sm">
+                <span className="font-sans font-bold text-[#FF5E00]">in</span>
+                LinkedIn
+              </span>
+              <ArrowUpRight className="w-4 h-4 text-zinc-400 group-hover:text-white transition-colors" />
+            </a>
           </div>
         </div>
 
         <div className="mt-10 md:mt-16 pt-6 border-t border-white/[0.06] flex flex-col md:flex-row items-center justify-between gap-3 text-xs font-mono text-zinc-500">
           <div>© 2026 Sunny Sharma — Built with passion for web & security</div>
           <div className="flex items-center gap-4">
-            <span>Lonavala · Pune</span>
+            <span>Pune, India</span>
             <span className="w-1 h-1 rounded-full bg-zinc-700" />
             <span>v1.0</span>
           </div>
@@ -57,8 +70,5 @@ export default function Footer() {
     </footer>
   );
 }
-
-
-
 
 
